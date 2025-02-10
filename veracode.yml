@@ -1,0 +1,11 @@
+veracode_static_scan:
+  use_custom_workflow: veracode-build
+  artifact_file: veracode-artifact
+
+  push:
+    trigger: true
+    branches_to_run:
+      - '*'
+
+  analysis_on_platform: true
+  break_build_policy_findings: true
